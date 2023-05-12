@@ -1,0 +1,61 @@
+/* Montserrat; a sans-serif used for normal text*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+/* IBM Plex Mono; the lab font */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+
+html {
+  --avalon-color: #E2DCC9;
+  --warning-color: #CCB627;
+  --type-color: #262626;
+  --paper-color: #FDFCFA;
+
+  --sans: "Montserrat";
+  --mono: "IBM Plex Mono";
+
+  font-size: 18px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+body {
+  margin: 0px;
+}
+
+/* Layout */
+main {
+  display: flex;
+  overflow: hidden;
+  justify-content: start;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+/* Scrollbars */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  @apply bg-paper;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  @apply bg-type rounded-1;
+}
+
+/* Utilities ---------------------------------------------------------------- */
+.ellipsis {
+  @apply whitespace-nowrap overflow-hidden overflow-ellipsis;
+}

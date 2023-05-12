@@ -1,0 +1,92 @@
+module.exports = {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx,css}"],
+  theme: {
+    colors: {
+      /* App */
+      none: "#FDFCFA00",
+      avalon: "#E2DCC9",
+      warning: "#CCB627",
+      type: "#262626",
+      paper: "#FDFCFA",
+    },
+    fontFamily: {
+      sans: "Montserrat, sans-serif",
+      machine: "IBM Plex Mono, monospace",
+      serif: ["Georgia", "serif"],
+      script: ["Dancing Script", "script"],
+      alt: ["Montserrat Alternates", "sans-serif"],
+    },
+    fontSize: {
+      root: "1.125em",
+      body: "1rem",
+      hero: "2.8224rem",
+      h1: "1.68rem",
+      h2: "1.41rem",
+      h3: "1.19rem",
+      footer: ".8411rem",
+      sm: ".595rem",
+    },
+    spacing: {
+      before: "1em",
+      after: ".595em",
+      0: "1px",
+      1: "3px",
+      2: "5px",
+      3: "8px",
+      4: "12px",
+      5: "20px",
+      6: "34px",
+      7: "50px",
+      8: "85px",
+      9: "140px",
+    },
+    outlineWidth: {
+      1: "1px",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      5: "5px",
+    },
+    borderRadius: {
+      1: "3px",
+      2: "5px",
+      3: "8px",
+      4: "12px",
+      5: "20px",
+      6: "34px",
+      7: "50px",
+      8: "85px",
+      9: "140px",
+    },
+    minWidth: {
+      0: "0",
+    },
+    minHeight: {
+      0: "0",
+    },
+    width: {
+      0: "0",
+      screen: "100vw",
+      full: "100%",
+    },
+    height: {
+      0: "0",
+      screen: "100vh",
+      full: "100%",
+    },
+    boxShadow: {
+      base: "0px 4px 8px 0px #26262633",
+      lab: "3px 5px 0 #262626",
+      "lab-inset": "inset 3px 5px 0 #262626",
+    },
+    extend: {
+      borderWidth: {
+        1: "1px",
+        2: "2px",
+        3: "3px",
+        4: "4px",
+        5: "5px",
+      },
+    },
+  },
+};

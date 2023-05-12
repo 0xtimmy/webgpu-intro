@@ -1,30 +1,70 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="lab">
+    <!--<Navbar />-->
+    <h1>{{ title }}</h1>
+    <router-view class="main" />
+    <div class="" :class="{ dev: dev }">
+      <div class="in-dev">IN DEVELOPMENT</div>
+    </div>
   </div>
-  <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  computed: {
+    title: function() {
+      return this.$route.meta.title;
+    },
+    dev: function() {
+      return true;
+    }
+  }
+})
+</script>
+
+<style scoped>
+
+#lab {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-#nav {
-  padding: 30px;
+#lab > h1 {
+  margin: 0 2rem;
+}
+.main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0px;
 }
 
-#nav a {
+.dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--avalon-color);
+  flex-shrink: 0;
+  height: 85px;
+  background-image: url("./assets/caution.svg");
+  background-position: center;
+}
+
+.in-dev {
+  font-size: 2rem;
+  padding: 0 2rem;
   font-weight: bold;
-  color: #2c3e50;
+  letter-spacing: 0.35rem;
+  display: none;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.dev .in-dev {
+  background-color: var(--avalon-color);
+  border: solid var(--type-color) 4px;
+  display: inline-block;
 }
+
 </style>

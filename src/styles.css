@@ -30,6 +30,13 @@ main {
   padding: 0 2rem;
 }
 
+.webgpu-warning {
+  background-color: var(--warning-color);
+  font-weight: bold;
+  padding: 1rem 2rem;
+  font-size: 1rem
+}
+
 /* Scrollbars */
 .scrollbar-none::-webkit-scrollbar {
   display: none;

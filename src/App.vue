@@ -1,6 +1,6 @@
 <template>
   <div id="lab">
-    <!--<Navbar />-->
+    <Navbar />
     <h1>{{ title }}</h1>
     <router-view class="main" />
     <div class="" :class="{ dev: dev }">
@@ -11,8 +11,12 @@
 
 <script>
 import { defineComponent } from "vue";
+import Navbar from "@/components/Navbar.vue";
 
 export default defineComponent({
+  components: {
+    Navbar,
+  },
   computed: {
     title: function() {
       return this.$route.meta.title;

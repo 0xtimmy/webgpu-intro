@@ -1,13 +1,22 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
+import Intro from "../views/Intro.vue";
+import PerlinNoise from "../views/PerlinNoise.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "PerlinNoise",
+    component: PerlinNoise,
     meta: {
-      title: "WebGPU" 
+      title: "Perlin Noise" 
+    }
+  },
+  {
+    path: "/intro",
+    name: "Intro",
+    component: Intro,
+    meta: {
+      title: "Game of Life" 
     }
   },
 ];

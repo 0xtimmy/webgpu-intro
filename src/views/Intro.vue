@@ -351,11 +351,4 @@ export default defineComponent({
   canvas {
     border: solid 10px var(--type-color);
   }
-
-  .webgpu-warning {
-    background-color: var(--warning-color);
-    font-weight: bold;
-    padding: 1rem 2rem;
-    font-size: 1rem
-  }
 </style>
